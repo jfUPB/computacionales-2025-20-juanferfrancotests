@@ -24,8 +24,13 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 
 #### Programa
 @5
+
 D=A
+
 @10
+
 D=D+A
+
 @20
+
 M=D
