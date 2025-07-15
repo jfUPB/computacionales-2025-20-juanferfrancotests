@@ -11,6 +11,12 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 - D=D+A :una suma de sus valores actuales
 - M=D : se usa para guardar la informacion de D en una parte de la ram
 - 0,JMP : si el valor de A es igual a 0 salta a la pocision #0 de la ROM pero el valor que posea D se mantiene
+- @i :
+- D=M:
+- @SCREEN:
+- @READKEYBOARD:
+- @KBD:
+- D;JNE: 
 #### Experimento 1
 
 *  ¿Qué sucede? se observa como los valores (PC,A y D) vancambiando a lo largo de la interaccion 
