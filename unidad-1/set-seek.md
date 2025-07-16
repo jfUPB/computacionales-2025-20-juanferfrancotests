@@ -11,12 +11,12 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 - D=D+A :una suma de sus valores actuales
 - M=D : se usa para guardar la informacion de D en una parte de la ram
 - 0,JMP : si el valor de A es igual a 0 salta a la pocision #0 de la ROM pero el valor que posea D se mantiene
-- @i :
-- D=M:
+- @i : Accede a la dirección de la variable i
+- D=M: Guarda en D el valor almacenado en i
 - @SCREEN:
-- @READKEYBOARD:
-- @KBD:
-- D;JNE: 
+- @READKEYBOARD : Dirección de salto si el teclado está presionado
+- @KBD : Dirección del teclado
+- D;JNE: Si D != 0 (tecla presionada), salta a READKEYBOARD
 #### Experimento 1
 
 *  ¿Qué sucede? se observa como los valores (PC,A y D) van cambiando a lo largo de la interaccion 
