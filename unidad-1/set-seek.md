@@ -110,3 +110,11 @@ M=-1
 M=M+1
 @READKEYBOARD
 0;JMP```
+
+En esta parte del programa, se detecta que la persona está oprimiendo una tecla. Esto activa un contador progresivo que recorre la memoria desde @SCREEN hasta @KBD, escribiendo el valor -1 en cada dirección de memoria correspondiente a un píxel.
+
+El valor -1 en la memoria hace que esos píxeles se coloreen en negro (pantalla encendida).
+
+Cuando se deja de oprimir la tecla, el programa comienza a restaurar los píxeles, escribiendo 0 en esas posiciones, lo que equivale a apagar los píxeles (pantalla en blanco).
+
+
