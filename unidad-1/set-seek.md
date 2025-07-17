@@ -16,6 +16,8 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 - @SCREEN:
 - @READKEYBOARD : Dirección de salto si el teclado está presionado
 - @KBD = @24576
+- M=M+1 :En la direccion actualmente apuntada por A suma 1
+- A=M : Carga en el registro A el valor que hay en la dirección de memoria actualmente apuntada por A
 
 #### Extraido de Chat GPT
 
