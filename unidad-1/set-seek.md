@@ -12,11 +12,23 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 - M=D : se usa para guardar la informacion de D en una parte de la ram
 - 0,JMP : si el valor de A es igual a 0 salta a la pocision #0 de la ROM pero el valor que posea D se mantiene
 - @i : Accede a la dirección de la variable i
-- D=M: Guarda en D el valor almacenado en i
+- D=M: Copia el valor contenido en la dirección de memoria apuntada actualmente por A en D.
 - @SCREEN:
 - @READKEYBOARD : Dirección de salto si el teclado está presionado
 - @KBD : Dirección del teclado
-- D;JNE: Si D != 0 (tecla presionada), salta a READKEYBOARD
+
+#### Extraido de Chat GPT
+
+| Código de salto | Significado en español          | Condición para que salte (si D...)          |
+|------------------|---------------------------------|---------------------------------------------|
+| JGT              | Saltar si es mayor              | D > 0                                       |
+| JEQ              | Saltar si es igual              | D == 0                                      |
+| JGE              | Saltar si es mayor o igual      | D >= 0                                      |
+| JLT              | Saltar si es menor              | D < 0                                       |
+| JNE              | Saltar si es diferente          | D ≠ 0                                       |
+| JLE              | Saltar si es menor o igual      | D <= 0                                      |
+| JMP              | Saltar incondicionalmente       | Siempre salta                               |
+
 #### Experimento 1
 
 *  ¿Qué sucede? se observa como los valores (PC,A y D) van cambiando a lo largo de la interaccion 
