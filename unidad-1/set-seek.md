@@ -69,7 +69,7 @@ Describe qué se necesita para leer el teclado y mostrar información en la pant
 
 - Identifica un bucle en el programa y explica su funcionamiento.
 
-```asm
+``` asm
 @SCREEN
 D=A
 @i
@@ -95,7 +95,7 @@ Si D = D - A da como resultado 0, se realiza un salto hacia la posición 4 del c
 
 - Identifica una condición en el programa y explica su funcionamiento.
 
-```asm
+``` asm
 (KEYPRESSED)
 @i
 D=M
@@ -109,12 +109,44 @@ M=-1
 @i
 M=M+1
 @READKEYBOARD
-0;JMP```
+0;JMP
+```
 
 En esta parte del programa, se detecta que la persona está oprimiendo una tecla. Esto activa un contador progresivo que recorre la memoria desde @SCREEN hasta @KBD, escribiendo el valor -1 en cada dirección de memoria correspondiente a un píxel.
 
 El valor -1 en la memoria hace que esos píxeles se coloreen en negro (pantalla encendida).
 
 Cuando se deja de oprimir la tecla, el programa comienza a restaurar los píxeles, escribiendo 0 en esas posiciones, lo que equivale a apagar los píxeles (pantalla en blanco).
+
+### Actividad 03
+
+- Escribe un programa que compare el valor almacenado en la dirección de memoria 5 con el valor 10. Si el valor es menor que 10, guarda el valor 1 en la dirección 7. Si el valor es mayor o igual a 10, guarda el valor 0 en la dirección 7.
+
+``` asm
+@10 //cualquier valor que va a estar en la memoria RAM 5
+D=A
+@5
+M=D // guarde el numero 10 en la RAM5
+@10
+D=D-A
+@15
+@1
+D=A
+@7
+M=D
+@0
+D;JLE
+@1  // Funcion 
+D=A
+@0
+D;JGT
+
+
+
+
+```
+
+
+
 
 
