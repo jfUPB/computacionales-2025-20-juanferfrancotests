@@ -67,7 +67,7 @@ Identifica una instrucción que use la ALU y explica qué hace. Se vuleve negra 
 
 Describe qué se necesita para leer el teclado y mostrar información en la pantalla. se necesita instanciar @KBD en la memoria RAM, luego A=D y M=D, 
 
-Identifica un bucle en el programa y explica su funcionamiento.
+- Identifica un bucle en el programa y explica su funcionamiento.
 
 ```asm
 @SCREEN
@@ -79,9 +79,21 @@ M=D
 D=M
 @KEYPRESSED
 D;JNE
+@i
+D=M
+@SCREEN
+D=D-A
+@READKEYBOARD
+D;JLE
 ```
 
-Identifica una condición en el programa y explica su funcionamiento.
+El programa delimita la pantalla colocando en la RAM[16] la posición del primer píxel (@SCREEN). Luego, D = @SCREEN, y después accedemos a la dirección @KBD, haciendo que D lea la información del teclado (@KBD), la cual varía según la tecla que estemos oprimiendo.
+
+Si D es diferente de 0, se realiza un salto. Pero en este caso no se oprimirá ninguna tecla, por lo tanto el programa sigue corriendo y hace que D lea la información de la posición @i en la RAM.
+
+Si D = D - A da como resultado 0, se realiza un salto hacia la posición 4 del contador de programa (PC).
+
+- Identifica una condición en el programa y explica su funcionamiento.
 
 ```asm
 (KEYPRESSED)
