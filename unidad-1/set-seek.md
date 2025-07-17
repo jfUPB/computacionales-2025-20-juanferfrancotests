@@ -15,7 +15,7 @@ Deduciendo el codigo de la actividad 1 puedo hallar los siguientes apuntes;
 - D=M: Copia el valor contenido en la dirección de memoria apuntada actualmente por A en D.
 - @SCREEN:
 - @READKEYBOARD : Dirección de salto si el teclado está presionado
-- @KBD : Dirección del teclado
+- @KBD = @24576
 
 #### Extraido de Chat GPT
 
