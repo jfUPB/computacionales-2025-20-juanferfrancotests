@@ -59,13 +59,13 @@ M=D
 
 Reporta en tu bitácora de aprendizaje:
 
-Identifica una instrucción que use la ALU y explica qué hace.
+Identifica una instrucción que use la ALU y explica qué hace. Se vuleve negra de arriba hacia abajo y se vuelve blanca de abajo hacia arriba
 
-¿Para qué sirve el registro PC?
+¿Para qué sirve el registro PC? Para guardar informacion en la RAM... creo
 
-¿Cuál es la diferencia entre @i y @READKEYBOARD?
+¿Cuál es la diferencia entre @i y @READKEYBOARD? @i se una como un punto de almacenamiento de la informacion, @READKEYBOARD toma el dato leido cuando una persona oprime una tecla tambien, se usa para designar saltos en el programa, algunos de estos saltos dirigen al PC a funciones.
 
-Describe qué se necesita para leer el teclado y mostrar información en la pantalla.
+Describe qué se necesita para leer el teclado y mostrar información en la pantalla. se necesita instanciar @KBD en la memoria RAM, luego A=D y M=D, 
 
 Identifica un bucle en el programa y explica su funcionamiento.
 
