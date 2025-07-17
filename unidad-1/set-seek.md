@@ -69,4 +69,32 @@ Describe qué se necesita para leer el teclado y mostrar información en la pant
 
 Identifica un bucle en el programa y explica su funcionamiento.
 
+```asm
+@SCREEN
+D=A
+@i
+M=D
+(READKEYBOARD)
+@KBD
+D=M
+@KEYPRESSED
+D;JNE
+```
+
 Identifica una condición en el programa y explica su funcionamiento.
+
+```asm
+(KEYPRESSED)
+@i
+D=M
+@KBD
+D=D-A
+@READKEYBOARD
+D;JGE
+@16
+A=M
+M=-1
+@i
+M=M+1
+@READKEYBOARD
+0;JMP```
