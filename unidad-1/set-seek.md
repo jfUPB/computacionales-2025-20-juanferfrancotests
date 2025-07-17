@@ -123,30 +123,34 @@ Cuando se deja de oprimir la tecla, el programa comienza a restaurar los píxele
 - Escribe un programa que compare el valor almacenado en la dirección de memoria 5 con el valor 10. Si el valor es menor que 10, guarda el valor 1 en la dirección 7. Si el valor es mayor o igual a 10, guarda el valor 0 en la dirección 7.
 
 ``` asm
+
+(INICIO)
 @10 //cualquier valor que va a estar en la memoria RAM 5
 D=A
 @5
-M=D // guarde el numero 10 en la RAM5
+M=D // guarda el numero 10 en la RAM5
 @10
+D=A
+@5
+A=M
 D=D-A
-@15
-@1
-D=A
+
+@(SUMA UNO)
+D;ALGUN JUPM
 @7
-M=D
-@0
+M=-1
+@(INICIO)
 D;JLE
-@1  // Funcion 
-D=A
-@0
-D;JGT
 
-
-
+@(SUMA UNO)
+@7
+M=1
+@(INICIO)
+0;JMP
 
 ```
 
-
+*Pendiente:* debo hacer un contador donde se le reste RAM 5 uno por uno hasta que sea igual a 0 si es 0 se activa una funcion si.
 
 
 
