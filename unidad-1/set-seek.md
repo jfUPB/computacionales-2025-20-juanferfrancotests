@@ -149,13 +149,6 @@ D;JEQ
 D;JGT  
 @(CALCULAR)
 
-
-@10 // se asigna el numero que se va a comparar a A y D
-D=A
-@5 // vamos a la posicion 5 de la RAM
-A=M
-D=D-A // restamos D= 10 - 12, 
-
 (RESTA UNO)
 D;ALGUN JUPM
 @7
