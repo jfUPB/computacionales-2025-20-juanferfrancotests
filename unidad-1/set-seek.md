@@ -125,24 +125,45 @@ Cuando se deja de oprimir la tecla, el programa comienza a restaurar los píxele
 ``` asm
 
 (INICIO)
-@10 //cualquier valor que va a estar en la memoria RAM 5
+@12 //cualquier valor que va a estar en la memoria RAM 5
 D=A
 @5
 M=D // guarda el numero 10 en la RAM5
-@10
-D=A
-@5
-A=M
-D=D-A
 
+@10 //cualquier valor que va a estar en la memoria RAM 4
+D=A
+@4
+M=D // guarda el numero 10 en la RAM4
+
+(CALCULAR)
+@5
+M=M-1
+M=D
 @(SUMA UNO)
+D;JEQ   
+@4
+M=M-1
+M=D
+@(RESTA UNO)
+D;JEQ 
+D;JGT  
+@(CALCULAR)
+
+
+@10 // se asigna el numero que se va a comparar a A y D
+D=A
+@5 // vamos a la posicion 5 de la RAM
+A=M
+D=D-A // restamos D= 10 - 12, 
+
+(RESTA UNO)
 D;ALGUN JUPM
 @7
 M=-1
 @(INICIO)
 D;JLE
 
-@(SUMA UNO)
+(SUMA UNO)
 @7
 M=1
 @(INICIO)
