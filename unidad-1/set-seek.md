@@ -165,7 +165,29 @@ M=1
 
 ```
 
-*Pendiente:* debo hacer un contador donde se le reste RAM 5 uno por uno hasta que sea igual a 0 si es 0 se activa una funcion si.
+### Actividad 04
 
+“Crea un programa que use un ciclo para sumar los números del 1 al 5 y guarde el resultado en la dirección de memoria 12.”
+
+``` asm
+(INICIO)
+@0 // Valor inicial
+D=A
+@12
+M=D // guarda el numero 0 en la RAM12
+
+(CALCULAR)
+@12
+M=D
+D=D+1
+D=M   // guarda la suma quw se acabo de realizar
+@5
+A=D
+@12
+A=M
+D=D-A
+@(CALCULAR)
+D;JGT 
+```
 
 
