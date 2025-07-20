@@ -229,4 +229,6 @@ D=D-A
 @(DRAW)
 D;JGT
 ```
+**Reflexion:** para realizar este trazo se necesito crear una variable y un bucle contador que determinara cuando esta variable pintara sus 16 pixeles
+
 
