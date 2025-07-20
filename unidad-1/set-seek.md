@@ -231,4 +231,7 @@ D;JGT
 ```
 **Reflexion:** para realizar este trazo se necesito crear una variable y un bucle contador que determinara cuando esta variable pintara sus 16 pixeles
 
+### Actividad 07
+### Entrada salida interactiva
 
+Modifica el programa de la actividad anterior de tal manera que puedas mover la línea horizontal de derecha a izquierda usando las teclas d y i respectivamente. Tu programa no tiene que verificar si la línea se sale de la pantalla.
