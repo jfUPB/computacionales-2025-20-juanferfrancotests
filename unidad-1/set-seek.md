@@ -235,3 +235,35 @@ D;JGT
 ### Entrada salida interactiva
 
 Modifica el programa de la actividad anterior de tal manera que puedas mover la línea horizontal de derecha a izquierda usando las teclas d y i respectivamente. Tu programa no tiene que verificar si la línea se sale de la pantalla.
+
+
+``` asm
+(Variable1)
+@16384
+D=A
+@16
+M=D
+
+(ALTO)
+@0
+D=A
+@15
+M=D
+
+(DRAW)
+@16
+A=M
+M=-1
+@16
+D=M
+D=D+A
+M=D
+@16
+D=A
+@15
+A=M
+D=D-A
+@(ALTO)
+D;JEQ
+```
+
