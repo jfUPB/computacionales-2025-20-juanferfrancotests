@@ -203,5 +203,30 @@ Vamos a resolver juntos este problema:
 M=A
 M=-1
 ```
+### Actividad 06
+### Dibujando una línea horizontal
+Vamos a resolver juntos este problema:
 
+“Modifica el programa anterior para que dibuje una línea horizontal negra de 16 pixeles de largo en la esquina superior izquierda de la pantalla. (Recuerda que cada word en la memoria representa 16 pixeles).”
+
+``` asm
+(Variable)
+@16384
+D=A
+@16
+M=D
+(DRAW)
+@16
+A=M
+M=-1
+@16
+M=M+1
+@16400
+D=A
+@12
+A=M
+D=D-A
+@(DRAW)
+D;JGT
+```
 
