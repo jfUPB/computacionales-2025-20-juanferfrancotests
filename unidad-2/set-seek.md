@@ -139,7 +139,7 @@ Convierte un ciclo while en un ciclo for
 
 Enunciado: considera el siguiente programa:
 
-``` c
+``` c++
 
 //Adds 1+...+100.
  int i=1;
@@ -192,11 +192,11 @@ A=M
 D=D-A
 // si no es igual a 0 salta a @FOR
 @FOR
-D;JMP
+D;JEQ
+@i
+M=0
 @INICIO
 D;JMP
-
-
 
 ```
 
@@ -204,3 +204,88 @@ D;JMP
 
 * Compara las versiones en ensamblador del while y del for. ¿Qué puedes concluir?
 
+las diferencias que noto con el los dos codigos es que uno; deja a la variable i = 100, mientras que en el for me enfoque que cuado se terminara el bucle la variable i volviera a ser 0
+
+
+### Actividad 05
+
+**Punteros**
+
+Un puntero es una variable que almacena la dirección de memoria de otra variable. Observa el siguiente programa escrito en C++:
+
+``` c++
+int a = 10;
+int* p;
+p = &a;
+*p = 20;
+
+```
+
+Convierte estos programas a ensamblador y realiza la simulación paso a paso. Recuerda la metodología: predice, ejecuta, observa y reflexiona.
+
+**Caso 1**
+
+``` c++
+int a = 10;
+int* p;
+p = &a;
+*p = 20;
+
+```
+traduccion a asembler
+
+``` ams
+// necesitamos una varible (i) que guarde el valor de 10
+A=10
+D=A
+@i
+M=D
+// tencesitamos crear otra varible que copie el valor de (i), variable (j)
+@j
+M=D
+// cuaando (j) sea modificado a 20 (i) tambien sea modificado
+@KBD
+D=A
+@i
+M=D
+@j
+M=D
+
+```
+
+**Caso 2**
+
+``` c++
+int a = 10;
+int b = 5;
+int *p;
+p = &a;
+b = *p;
+```
+
+traduccion a asembler
+
+``` ams
+// necesitamos una varible (i) que guarde el valor de 10
+A=10
+D=A
+@i
+M=D
+// tencesitamos crear otra varible que copie el valor de (i), variable (j)
+@j
+M=D
+A=5
+D=A
+@k
+M=D
+// cuaando (i) sea modificado a 20 (j) y (k) tambien sea modificado
+@KBD
+D=A
+@j
+M=D
+@i
+M=D
+@k
+M=D
+
+```
