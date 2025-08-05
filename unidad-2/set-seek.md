@@ -159,6 +159,7 @@ int sum=0;
 for(int i = 1; i <=100; i++){
    sum+= i;
 }
+
 ```
 
 
@@ -169,28 +170,27 @@ Son equivalentes porque los dos estan contando lo mismo, solo que el contdor en 
 * Convierte la versión del for a ensamblador.
 
 ``` asm
-
 @INICIO
-// incializamos los valores
+; incializamos los valores
 A=0
 D=A
 @i
 M=D
-// funcion for queremos que M(i) sume hasta 100 y luego se borre
+; funcion for queremos que M(i) sume hasta 100 y luego se borre
 @FOR
-// creamos un contador que va alimitar a i
+; creamos un contador que va alimitar a i
 @i
 D=M
 D = D + 1
 @i
 M=D
-// queremos restarlo con 100
+; queremos restarlo con 100
 A=100
 D=A
 @i
 A=M
 D=D-A
-// si no es igual a 0 salta a @FOR
+; si no es igual a 0 salta a @FOR
 @FOR
 D;JEQ
 @i
@@ -214,6 +214,7 @@ las diferencias que noto con el los dos codigos es que uno; deja a la variable i
 Un puntero es una variable que almacena la dirección de memoria de otra variable. Observa el siguiente programa escrito en C++:
 
 ``` c++
+
 int a = 10;
 int* p;
 p = &a;
@@ -226,6 +227,7 @@ Convierte estos programas a ensamblador y realiza la simulación paso a paso. Re
 **Caso 1**
 
 ``` c++
+
 int a = 10;
 int* p;
 p = &a;
@@ -234,16 +236,17 @@ p = &a;
 ```
 traduccion a asembler
 
-``` ams
-// necesitamos una varible (i) que guarde el valor de 10
+``` asm
+
+;necesitamos una varible (i) que guarde el valor de 10
 A=10
 D=A
 @i
 M=D
-// tencesitamos crear otra varible que copie el valor de (i), variable (j)
+;tencesitamos crear otra varible que copie el valor de (i), variable (j)
 @j
 M=D
-// cuaando (j) sea modificado a 20 (i) tambien sea modificado
+;cuaando (j) sea modificado a 20 (i) tambien sea modificado
 @KBD
 D=A
 @i
@@ -265,20 +268,20 @@ b = *p;
 
 traduccion a asembler
 
-``` ams
-// necesitamos una varible (i) que guarde el valor de 10
+``` asm
+;necesitamos una varible (i) que guarde el valor de 10
 A=10
 D=A
 @i
 M=D
-// tencesitamos crear otra varible que copie el valor de (i), variable (j)
+;tencesitamos crear otra varible que copie el valor de (i), variable (j)
 @j
 M=D
 A=5
 D=A
 @k
 M=D
-// cuaando (i) sea modificado a 20 (j) y (k) tambien sea modificado
+; cuaando (i) sea modificado a 20 (j) y (k) tambien sea modificado
 @KBD
 D=A
 @j
@@ -289,3 +292,4 @@ M=D
 M=D
 
 ```
+
