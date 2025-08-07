@@ -29,9 +29,7 @@ M=D
 M=1
 
 @MATRIZ
-@j
-D=A
-@1
+
 
 ;auntomatizamos la matriz mara que llegue hasta 10
 ;Hacemos la matriz Coloque en la Ram el numero que corresponde
@@ -49,9 +47,45 @@ A=D
 @i
 A=M
 D=D-A
+;
+@1
+D=A
+@i
+M=D
 @MATRIZ
 D;JEQ
 
 
+; creamos el ciclo for: en el ciclo se debe intanciar
+@j
+M=0
+@FOR
+; ahora j debe coger el dato de la posicion indicada La matriz i
+@j
+D=M
+@i
+D=D+A
+@R13    ; Vamos a usar R13 como temporal
+M=D     ; Guardamos D en R13
+@10     ; que el puntero de j se reste con 10
+D=A
+@R13
+A=M    ; estamos en la posicion M(j) + i para coger el dato que existe en la posicion actual
+A=M
+D=D-A  ; que el puntero de j se reste con 10
+
+;comparamos si D = 0, si no que vuelva a @FOR
+@FIN
+@j
+M=M+1
+
+D;JEQ
+@FOR
+D;JMP
+
+
+
+@FIN
 ```
+
 
