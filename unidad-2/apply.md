@@ -76,10 +76,9 @@ D=D-A  ; que el puntero de j se reste con 10
 
 ;comparamos si D = 0, si no que vuelva a @FOR
 @FIN
+D;JEQ
 @j
 M=M+1
-
-D;JEQ
 @FOR
 D;JMP
 
@@ -87,5 +86,6 @@ D;JMP
 
 @FIN
 ```
+
 
 
