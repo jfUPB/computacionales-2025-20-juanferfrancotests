@@ -28,13 +28,12 @@ M=D
 @j
 M=1
 
-;auntomatizamos la matriz mara que llegue hasta 10
 @MATRIZ
 @j
 D=A
 @1
-D=D+A
 
+;auntomatizamos la matriz mara que llegue hasta 10
 ;Hacemos la matriz Coloque en la Ram el numero que corresponde
 @i
 A=M
@@ -45,6 +44,14 @@ A=M
 M=D     ; colocamos el valor de D en el posicion que tenga pordentro de la ram (i) 
 @i      ; hcaemos que i aumente 10 veces
 M=M+1
+@10
+A=D
+@i
+A=M
+D=D-A
+@MATRIZ
+D;JEQ
 
 
 ```
+
