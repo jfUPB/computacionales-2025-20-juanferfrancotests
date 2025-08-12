@@ -3,7 +3,7 @@
 
 ## 🤔 Fase: Reflect
 
-## 🤔 Actividad 07
+## Actividad 07
 
 Sin consultar tus apuntes, código previo o el simulador, responde a las siguientes preguntas con tus propias palabras. La meta es el esfuerzo por recordar, no la perfección.
 
@@ -36,3 +36,31 @@ Me ayudo bastante ya que con ejemplos del propio libro pude contruir lo que quer
 - Esta unidad fue el “puente” hacia C++. ¿Qué concepto de bajo nivel te sientes más seguro de poder identificar cuando lo veas implementado en C++?
 
 Los punteros, funciones, contadores, ciclos, etc...
+
+
+##  Actividad 09
+
+Responde a las siguientes preguntas. La sinceridad y el detalle en tus respuestas son cruciales para que pueda tomar acciones concretas.
+
+
+* Continuar: ¿Qué actividad, problema o explicación de esta unidad te ayudó más a entender la conexión entre el bajo y el alto nivel? ¿Qué debería mantener sin cambios?
+
+Los ejercicos de punteros, y el de arreglo que nos ponian a traduscir el codigo.
+
+Dejar de hacer: ¿Hubo alguna actividad o concepto que te pareció redundante, demasiado confuso o que aportó poco valor a tu aprendizaje? ¿Qué eliminarías o modificarías?
+
+Solo me confunde crear punteros en asembler pero los entieondo en su concepto y en c++.
+
+Empezar a hacer: ¿Qué idea tienes para mejorar la próxima unidad? ¿Hay algún tipo de recurso que te habría ayudado a entender mejor los punteros o los arreglos?
+
+La verdad si no fuera por la ayuda de un amigo, se me hubiera dificulatdo mucho con la guia entender los arreglos, los punteros si me quedaron claros.
+
+Ritmo y Dificultad: en una escala del 1 (muy fácil/lento) al 5 (muy difícil/rápido), ¿Cómo calificarías el salto de dificultad de la Unidad 1 a la Unidad 2? ¿El ritmo fue adecuado? Justifica tu calificación.
+
+la verdad si se noto mucho la diferecia con el ritmo, se siente un ritmo moderado, algo que alivia tambien cundo uno tiene materias como Taller, materias que uno no sabe en que momento le va a consumir toda una semana.
+
+
+Comentario Adicional: ¿Alguna otra cosa que quieras compartir sobre cómo te sentiste aprendiendo estos conceptos?
+
+No.
+
