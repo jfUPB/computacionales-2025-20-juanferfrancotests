@@ -18,7 +18,7 @@ Parte 1: recuperación de conocimiento (Retrieval Practice)
 - ¿Cómo implementarías el acceso a un elemento de un arreglo, como arr[j], en lenguaje ensamblador? Describe el rol de la dirección base del arreglo y el índice j en esta operación.
 
   ```asm
-  
+  no alcanzo a recordar.
 
   ```
 
@@ -63,4 +63,5 @@ la verdad si se noto mucho la diferecia con el ritmo, se siente un ritmo moderad
 Comentario Adicional: ¿Alguna otra cosa que quieras compartir sobre cómo te sentiste aprendiendo estos conceptos?
 
 No.
+
 
