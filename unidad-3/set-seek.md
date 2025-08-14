@@ -15,3 +15,6 @@ se bloquea el programa
 - ¿Por qué?
 
 porque se intenta modificar la funcion main, lo cual el sistema operativo lo detecta y lo bloquea
+
+### Experimento 2: modificar el segmento de datos (constante global):
+
