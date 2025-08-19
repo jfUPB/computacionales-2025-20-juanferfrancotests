@@ -212,3 +212,22 @@ En programas pequeños quizás no notes nada, pero en aplicaciones grandes o ser
 
 delete[] es obligatorio para arreglos porque garantiza que toda la memoria y todos los elementos sean correctamente liberados.
 
+
+## Actividad 05
+
+<img width="654" height="197" alt="image" src="https://github.com/user-attachments/assets/86521d6e-2ffa-4582-9f45-50fcc9635736" />
+
+
+Explica qué ocurre al copiar un objeto en C++ y en C#.
+
+¿Qué diferencias encuentras?
+
+que en C++ se usa paso por valor y en C# paso por referencia.
+
+¿Qué es copia en C++ y en C#?
+
+En C++ es una copia independiente a la original mientras que en C# el puntero y la original apuntan a la misma posicion de memoria
+
+¿Es una copia independiente de original?
+
+En C# no para hacerlo ay que agregar el metodo ICloneable.Clone()
