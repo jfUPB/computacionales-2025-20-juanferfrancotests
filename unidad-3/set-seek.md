@@ -16,6 +16,8 @@ Sirven para correr los el progrma o el codigo en un punto en especifico y poder 
 ## Actividad 02
 
 
+## Actividad 03
+
 
 ```cpp
 
@@ -103,5 +105,8 @@ se bloquea el programa
 porque se intenta modificar la funcion main, lo cual el sistema operativo lo detecta y lo bloquea
 
 ### Experimento 2: modificar el segmento de datos (constante global):
+
+<img width="761" height="275" alt="image" src="https://github.com/user-attachments/assets/dcddb2da-aa7a-40d4-a68c-30760c6685a5" />
+
 
 
