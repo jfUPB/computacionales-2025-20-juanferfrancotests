@@ -108,5 +108,22 @@ porque se intenta modificar la funcion main, lo cual el sistema operativo lo det
 
 <img width="761" height="275" alt="image" src="https://github.com/user-attachments/assets/dcddb2da-aa7a-40d4-a68c-30760c6685a5" />
 
+¿Qué ocurre? 
+
+se bloquea el programa
+
+¿Por qué?
+
+porque se intenta modificar un segmento de datos, ya que estoy tratando de sobrescribir los bytes que representan la dirección del puntero, lo cual es aún más peligroso y también es comportamiento indefinido.7
 
 
+### Experimento 3: modificar el segmento de datos (variables globales):
+<img width="799" height="352" alt="image" src="https://github.com/user-attachments/assets/ecfa65d6-ccce-4559-b9b4-d50a689948d0" />
+
+¿Qué ocurre? 
+
+el valor no inicializado toma un valor y luego modifica
+
+¿Por qué?
+
+porque la consola le da automaticamente un valor 0 al valor no inicializado.
