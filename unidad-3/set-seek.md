@@ -127,3 +127,22 @@ el valor no inicializado toma un valor y luego modifica
 ¿Por qué?
 
 porque la consola le da automaticamente un valor 0 al valor no inicializado.
+
+### Experimento 4: modificar la variable local estática de una función por fuera de ella:
+
+¿Qué ocurre?
+
+nada, el codigo me aparece que esta incorrecto 
+
+¿Por qué?
+
+la variable var_estatica = 42 no esta bien definidad
+
+¿Qué pasa con las variables cada que entras y sales de la función?
+
+las variables estaticas funcionan como globales dentro de la funcion, entonces cuando entran o salen la varible estatica permanece dentro dela funcion y sus modificaciones se mantinene
+
+En relación a la pregunta anterior ¿Qué pasa con las variables locales estáticas?
+
+Se guardan en la parte de la memoria de las variables estaticas y no en las globales.
+
