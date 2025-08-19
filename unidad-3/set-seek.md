@@ -164,6 +164,51 @@ Si, que se inicialisan con la palabra `static int` y la entera solo `int`.
 
 ## Experimento 6: modificar el segmento de heap:
 
+<img width="613" height="148" alt="image" src="https://github.com/user-attachments/assets/221f7b5f-7467-47ad-befd-f7cf29bd780a" />
 
+¿Qué ocurre? ¿Por qué?
 
+se crea una tabla con 5 elementos
+
+Comenta la línea de genera el error y analiza las siguientes preguntas:
+
+¿Qué diferencias notas entre el comportamiento y la gestión del Heap en comparación con el Stack?
+
+Stack:
+
+* Se gestiona automáticamente: las variables locales se crean al entrar en un bloque y se destruyen al salir.
+
+* Muy rápido, porque el sistema solo “mueve” el puntero de la pila.
+
+* Espacio limitado (si reservas demasiado → stack overflow).
+
+* Tiempo de vida corto y ligado al alcance (scope).
+
+Heap:
+
+* Se gestiona manualmente: el programador debe pedir memoria con new y liberarla con delete.
+
+* Más flexible: puedes reservar memoria en tiempo de ejecución con el tamaño que quieras.
+
+* Más lento de asignar y liberar (hay que buscar bloques libres en la memoria).
+
+* Tiempo de vida largo: persiste hasta que se llame a delete o termine el programa.
+
+¿Qué consecuencias tendría no liberar la memoria reservada con new?
+
+Aparece una fuga de memoria (memory leak):
+
+la memoria sigue ocupada aunque ya no tengas acceso a ella.
+
+En programas pequeños quizás no notes nada, pero en aplicaciones grandes o servidores de larga ejecución, las fugas acumuladas pueden:
+
+* Agotar la memoria disponible.
+
+* Degradar el rendimiento.
+
+* Provocar que el sistema operativo mate tu programa.
+
+¿Por qué es importante usar delete[] al liberar memoria asignada para un arreglo?
+
+delete[] es obligatorio para arreglos porque garantiza que toda la memoria y todos los elementos sean correctamente liberados.
 
