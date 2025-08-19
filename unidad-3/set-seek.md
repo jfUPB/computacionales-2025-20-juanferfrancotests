@@ -146,3 +146,24 @@ En relación a la pregunta anterior ¿Qué pasa con las variables locales estát
 
 Se guardan en la parte de la memoria de las variables estaticas y no en las globales.
 
+
+
+## Experimento 5: variables locales estática vs no estática:
+
+<img width="449" height="428" alt="image" src="https://github.com/user-attachments/assets/6f864c44-a365-49ad-95a9-94ab7834032b" />
+
+* ¿Qué ocurre? ¿Por qué?
+
+la variable entera se repitio 5 veces, mientras que la variable estatica se imprimia de 100 hasta 104, esto sucede porque la varible entera cuando sale de la funcion se destruye, encambio la statica se guarda en una parte de la memoria como una global pero solo se puede interactuar con ella por dentro de la funcion.
+
+Ves alguna diferencia entre las variables locales estáticas y no estáticas?
+
+Si, que se inicialisan con la palabra `static int` y la entera solo `int`.
+
+* ¿Qué pasa con las variables cada que entras y sales de la función?
+
+## Experimento 6: modificar el segmento de heap:
+
+
+
+
