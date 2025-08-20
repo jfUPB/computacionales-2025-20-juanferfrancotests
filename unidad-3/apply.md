@@ -88,7 +88,7 @@ La solucion es crear un destructor:
 ¿Por qué ocurre? `Personaje copiaHeroe = heroe;` es que todos los personajes creados apuntan a la misma direccion de memoria copiando exactamen los mismos datos.
 
 ¿Cuál es su consecuencia? que cuando de implemente el destructor se eliminen todos los datos.
-
+```
 STACK                          HEAP
 --------------------------------------------------
 heroe                          [100][20][15]   ← estadisticas
@@ -98,10 +98,10 @@ heroe                          [100][20][15]   ← estadisticas
 copiaHeroe
    nombre → "Copia de Aragorn"
    estadisticas ──────────────┘ (MISMA dirección)
-
+```
 ----------------------------------------------------------------------------------
 ""como debe de ser""
-
+```
 STACK                          HEAP
 --------------------------------------------------
 heroe                          [100][20][15]   ← estadisticas (A)
@@ -111,13 +111,14 @@ heroe                          [100][20][15]   ← estadisticas (A)
 copiaHeroe                     [100][20][15]   ← estadisticas (B, nueva copia)
    nombre → "Copia de Aragorn" ──────┘
    estadisticas ──────────────┘
-
+```
 
 Solución y refactorización (síntesis y creación):
 
 Re-escribe la clase Personaje para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la Regla de los tres que probablemente sea la solución que te ofrezca una IA.
 Presenta el código completo de tu clase Personaje corregida.
 Justificación de la Solución:
+
 
 
 
