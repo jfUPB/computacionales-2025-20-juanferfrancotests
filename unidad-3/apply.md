@@ -114,10 +114,64 @@ copiaHeroe                     [100][20][15]   ← estadisticas (B, nueva copia)
 ```
 
 Solución y refactorización (síntesis y creación):
+```
+class Personaje {
+public:
+    std::string nombre;
+    int* estadisticas;
+
+    Personaje(std::string n, int vida, int ataque, int defensa) {
+        nombre = n;
+        estadisticas = new int[3];
+        estadisticas[0] = vida;
+        estadisticas[1] = ataque;
+        estadisticas[2] = defensa;
+        std::cout << "Constructor: nace " << nombre << std::endl;
+    }
+
+    // Destructor
+    ~Personaje() {
+        delete[] estadisticas;
+        std::cout << "Destructor: muere " << nombre << std::endl;
+    }
+
+    // Constructor de copia (deep copy)
+    Personaje(const Personaje& other) {
+        nombre = other.nombre;
+        estadisticas = new int[3];
+        for (int i = 0; i < 3; i++) {
+            estadisticas[i] = other.estadisticas[i];
+        }
+        std::cout << "Constructor de copia: nace copia de " << nombre << std::endl;
+    }
+
+    // Operador de asignación (deep copy)
+    Personaje& operator=(const Personaje& other) {
+        if (this != &other) {
+            delete[] estadisticas; // limpiar la memoria previa
+            nombre = other.nombre;
+            estadisticas = new int[3];
+            for (int i = 0; i < 3; i++) {
+                estadisticas[i] = other.estadisticas[i];
+            }
+        }
+        return *this;
+    }
+
+    void imprimir() {
+        std::cout << "Personaje " << nombre
+            << " [Vida: " << estadisticas[0]
+            << ", ATK: " << estadisticas[1]
+            << ", DEF: " << estadisticas[2]
+            << "]" << std::endl;
+    }
+};
+```
 
 Re-escribe la clase Personaje para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la Regla de los tres que probablemente sea la solución que te ofrezca una IA.
 Presenta el código completo de tu clase Personaje corregida.
 Justificación de la Solución:
+
 
 
 
