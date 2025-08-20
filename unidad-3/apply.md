@@ -198,7 +198,7 @@ Este constructor segrega a los personajes en distintas partes de la memoria, par
             estadisticas[i] = other.estadisticas[i];
         }
 ```
-
+## Actividad 11
 ## Parte 1: recuperación de conocimiento (Retrieval Practice)
 
 Explica con tus propias palabras qué es el stack y qué es el heap en C++.
@@ -218,4 +218,5 @@ la variable local se guarda en el stack, la global y la estatica en variables gl
 Explica qué es un objeto en C++ desde la perspectiva de memoria. ¿Dónde se almacenan los miembros de instancia y dónde los miembros estáticos?
 
 un objeto es un molde con metodos que recibe parametros que cumplan con los requisitos, estos parametros pueden usar esos metodos, los metodos y funciones se guardan en el heap y el retorno creo que los puede guardar en el stack ya que es una parte de la memoria mas agil y se encarga de limpiar la memoria automaticamente.
+
 
