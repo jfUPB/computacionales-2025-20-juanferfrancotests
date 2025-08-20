@@ -87,7 +87,7 @@ La solucion es crear un destructor:
 
 ¿Por qué ocurre? `Personaje copiaHeroe = heroe;` es que todos los personajes creados apuntan a la misma direccion de memoria copiando exactamen los mismos datos.
 
-¿Cuál es su consecuencia? que cuando de implemente el destructor se eliminen todos los datos.
+¿Cuál es su consecuencia? que cuando de implemente el destructor se eliminen todos los datos. acontinuancion unas tables eplicativas creadas con IA
 ```
 STACK                          HEAP
 --------------------------------------------------
@@ -114,7 +114,8 @@ copiaHeroe                     [100][20][15]   ← estadisticas (B, nueva copia)
 ```
 
 Solución y refactorización (síntesis y creación):
-```
+
+```cpp
 class Personaje {
 public:
     std::string nombre;
@@ -167,13 +168,43 @@ public:
     }
 };
 ```
+ puede crear el destructor, pero no tengo la logica para crea o corregir correctamente el control de donde apunta los espacios de la memoria por ello documentare que se hizo y por que se hizo.
 
-Re-escribe la clase Personaje para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la Regla de los tres que probablemente sea la solución que te ofrezca una IA.
-Presenta el código completo de tu clase Personaje corregida.
-Justificación de la Solución:
+Esta parte del codigo es fundamental ya que crea una copia del personaje no un puntero que lo dreccione a una misma memoria, tambien no sobre escribe datos si no que deja a la posiblidad de crear estadisticas diferentes a las anteriores.
 
+```cp
+    Personaje& operator=(const Personaje& other) {
+        if (this != &other) {
+            delete[] estadisticas; // limpiar la memoria previa
+            nombre = other.nombre;
+            estadisticas = new int[3];
+            for (int i = 0; i < 3; i++) {
+                estadisticas[i] = other.estadisticas[i];
+            }
+        }
+        return *this;
+    }
 
+```
 
+Este constructor segrega a los personajes en distintas partes de la memoria, para que cuando se borre un dato no se corrompa.
 
+```cpp
+    // Constructor de copia (deep copy)
+    Personaje(const Personaje& other) {
+        nombre = other.nombre;
+        estadisticas = new int[3];
+        for (int i = 0; i < 3; i++) {
+            estadisticas[i] = other.estadisticas[i];
+        }
+```
 
+## Parte 1: recuperación de conocimiento (Retrieval Practice)
 
+Explica con tus propias palabras qué es el stack y qué es el heap en C++.
+
+Describe las tres formas de pasar parámetros a una función en C++ (valor, referencia y puntero). Para cada una, explica qué sucede en memoria y cuándo usarías cada método.
+
+¿Qué diferencia hay entre una variable local, una variable global y una variable local estática? ¿En qué segmento del mapa de memoria se almacena cada una?
+
+Explica qué es un objeto en C++ desde la perspectiva de memoria. ¿Dónde se almacenan los miembros de instancia y dónde los miembros estáticos?
