@@ -213,5 +213,9 @@ Describe las tres formas de pasar parámetros a una función en C++ (valor, refe
 
 ¿Qué diferencia hay entre una variable local, una variable global y una variable local estática? ¿En qué segmento del mapa de memoria se almacena cada una?
 
+la variable local se guarda en el stack, la global y la estatica en variables globales y estaticas
+
 Explica qué es un objeto en C++ desde la perspectiva de memoria. ¿Dónde se almacenan los miembros de instancia y dónde los miembros estáticos?
+
+un objeto es un molde con metodos que recibe parametros que cumplan con los requisitos, estos parametros pueden usar esos metodos, los metodos y funciones se guardan en el heap y el retorno creo que los puede guardar en el stack ya que es una parte de la memoria mas agil y se encarga de limpiar la memoria automaticamente.
 
