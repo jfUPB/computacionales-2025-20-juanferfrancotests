@@ -29,6 +29,7 @@ Reflexiona sobre las siguientes cuestiones:
 una clase es un molde que defininen como debe ser el objeto, el objeto posee caracteristicas definidas (los metodos de la clase se ejecutan en los objetos)
 
 *¿Qué diferencia notas entre el objeto Punto en C++ y C#?
+que en c++ es una copia y en C# es un referencia que apunta a la misma posicion de memoria del valor original
 
 *¿Qué es p en C++ y qué es p en C#? (en uno de ellos p es un objeto y en el otro es una referencia a un objeto).
 
@@ -36,4 +37,5 @@ una clase es un molde que defininen como debe ser el objeto, el objeto posee car
 
 *¿Qué observaste con el depurador acerca de p? Según lo que observaste ¿Qué es un objeto en C++?
 Actividad 07
+
 
