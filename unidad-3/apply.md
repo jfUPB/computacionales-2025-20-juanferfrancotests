@@ -88,34 +88,37 @@ La solucion es crear un destructor:
 ¿Por qué ocurre? `Personaje copiaHeroe = heroe;` es que todos los personajes creados apuntan a la misma direccion de memoria copiando exactamen los mismos datos.
 
 ¿Cuál es su consecuencia? que cuando de implemente el destructor se eliminen todos los datos.
+
+STACK                          HEAP
+--------------------------------------------------
+heroe                          [100][20][15]   ← estadisticas
+   nombre → "Aragorn"  ──────┘
+   estadisticas ──────┘
+
+copiaHeroe
+   nombre → "Copia de Aragorn"
+   estadisticas ──────────────┘ (MISMA dirección)
+
+----------------------------------------------------------------------------------
+""como debe de ser""
+
+STACK                          HEAP
+--------------------------------------------------
+heroe                          [100][20][15]   ← estadisticas (A)
+   nombre → "Aragorn"  ──────┘
+   estadisticas ──────┘
+
+copiaHeroe                     [100][20][15]   ← estadisticas (B, nueva copia)
+   nombre → "Copia de Aragorn" ──────┘
+   estadisticas ──────────────┘
+
+
 Solución y refactorización (síntesis y creación):
 
 Re-escribe la clase Personaje para que sea segura en cuanto a memoria. Debes utilizar los conocimientos adquiridos en esta unidad y por tanto tu solución no debería usar la Regla de los tres que probablemente sea la solución que te ofrezca una IA.
 Presenta el código completo de tu clase Personaje corregida.
 Justificación de la Solución:
 
-Explica por qué cada uno de los cambios que añadiste resuelven los problemas que diagnosticaste.
 
-Análisis de problemas: identifica al menos dos problemas serios en este código relacionados con el manejo de memoria. Explica por qué cada uno es problemático.
-
-Un error grave es que no esta liberando la memoria del personaje 
-
-Predicción de comportamiento: ¿Qué valor mostrará totalEnemigos después de ejecutar el programa? ¿Por qué ocurre esto?
-
-como la variable no esta definida el programa automaticamente le dara un valor de 0
-
-Propuesta de solución: escribe una versión corregida de la clase Enemigo que solucione los problemas identificados. Explica brevemente cada cambio que hiciste.
-
-Parte 3: reflexión metacognitiva
-
-De todos los conceptos que exploraste en esta unidad (stack vs heap, paso de parámetros, ciclo de vida de objetos, etc.), ¿Cuál consideras que es el más crítico para evitar errores en programas reales? ¿Por qué?
-
-En lo personal saber manejar el ciclo de vida de los objetos, ya que en experiencias pasadas la la memoria se me llegaba a ocupar del todo,
-
-¿Cómo cambió tu comprensión sobre lo que realmente es un “objeto” después de comparar C++ con C#? ¿Qué implicaciones prácticas tiene esta diferencia?
-
-Cambio, 
-
-Si tuvieras que explicar a un compañero de semestres anteriores por qué es importante entender la gestión de memoria en programación, ¿Qué le dirías en máximo 3 oraciones?
 
 
